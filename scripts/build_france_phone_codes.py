@@ -26,7 +26,7 @@ for feature in source['features']:
     largest = max(polys, key=lambda p: p.area)
     rep = largest.representative_point()
 
-    feature['properties']['ab_code'] = ab_codes.get(code)
+    feature['properties']['label'] = ab_codes.get(code)
     feature['properties']['label_lat'] = round(rep.y, 4)
     feature['properties']['label_lng'] = round(rep.x, 4)
 
